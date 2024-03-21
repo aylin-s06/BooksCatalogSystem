@@ -8,10 +8,15 @@ using Yes.Controllers;
 
 namespace Yes.Tests
 {
+    /// <summary>
+    /// Unit tests for the ReviewsController class.
+    /// </summary>
     [TestClass]
     public class ReviewsControllerTests
     {
-        //yay
+        /// <summary>
+        /// Test method to verify that SearchBookReviewsByBookName returns matching reviews for a given book.
+        /// </summary>
         [TestMethod]
         public void TestSearchBookReviewsByBookName_ReturnsMatchingReviews()
         {
@@ -30,6 +35,9 @@ namespace Yes.Tests
             CollectionAssert.AreEqual(expectedReviews, result);
         }
 
+        /// <summary>
+        /// Test method to verify that SearchBookReviewsByBookName returns an empty list when no matches are found.
+        /// </summary>
         [TestMethod]
         public void TestSearchBookReviewsByBookName_ReturnsEmptyListForNoMatches()
         {
@@ -43,6 +51,5 @@ namespace Yes.Tests
             // Assert
             Assert.AreEqual(0, result.Count);
         }
-        //samo book ostava
     }
 }

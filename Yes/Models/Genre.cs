@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace BookCatalog.Models
 {
+    /// <summary>
+    /// Represents a genre in the books catalog.
+    /// </summary>
     class Genre
     {
         [Key]

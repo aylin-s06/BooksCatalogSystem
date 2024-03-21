@@ -8,11 +8,15 @@ using User = BookCatalog.Models.User;
 
 namespace Yes.Tests
 {
+    /// <summary>
+    /// Unit tests for the UsersController class.
+    /// </summary>
     [TestClass]
     public class UsersControllerTests
     {
-
-        //hayir
+        /// <summary>
+        /// Test method to verify that IsUserValid returns true for a valid user.
+        /// </summary>
         [TestMethod]
         public void TestIsUserValid_ReturnsTrueForValidUser()
         {
@@ -26,6 +30,10 @@ namespace Yes.Tests
             // Assert
             Assert.IsTrue(isValid);
         }
+
+        /// <summary>
+        /// Test method to verify that IsUserValid returns false for an invalid user.
+        /// </summary>
         [TestMethod]
         public void TestIsUserValid_ReturnsFalseForInvalidUser()
         {
@@ -39,6 +47,10 @@ namespace Yes.Tests
             // Assert
             Assert.IsFalse(isValid);
         }
+
+        /// <summary>
+        /// Test method to verify that IsUserValid returns false for an empty email.
+        /// </summary>
         [TestMethod]
         public void TestIsUserValid_ReturnsFalseForEmptyEmail()
         {
@@ -52,6 +64,9 @@ namespace Yes.Tests
             Assert.IsFalse(isValid);
         }
 
+        /// <summary>
+        /// Test method to verify that IsUserValid returns false for an incorrect password.
+        /// </summary>
         [TestMethod]
         public void TestIsUserValid_ReturnsFalseForIncorrectPassword()
         {
@@ -65,6 +80,10 @@ namespace Yes.Tests
             // Assert
             Assert.IsFalse(isValid);
         }
+
+        /// <summary>
+        /// Test method to verify that GetUserNameByEmail returns the correct username for an existing email.
+        /// </summary>
         [TestMethod]
         public void TestGetUserNameByEmail_ReturnsUserNameForExistingEmail()
         {
@@ -79,7 +98,10 @@ namespace Yes.Tests
             // Assert
             Assert.AreEqual(expectedUserName, userName);
         }
-        //yes
+
+        /// <summary>
+        /// Test method to verify that GetUserNameByEmail returns an empty string for a non-existing email.
+        /// </summary>
         [TestMethod]
         public void TestGetUserNameByEmail_ReturnsEmptyStringForNonExistingEmail()
         {
@@ -91,7 +113,7 @@ namespace Yes.Tests
             var userName = service.GetUserNameByEmail(email);
 
             // Assert
-            Assert.AreEqual("", userName); //dobre e
+            Assert.AreEqual("", userName); 
         }
     }
 }

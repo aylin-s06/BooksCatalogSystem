@@ -8,9 +8,15 @@ using System.Threading.Tasks;
 
 namespace Yes.Tests
 {
+    /// <summary>
+    /// Unit tests for the BooksController class.
+    /// </summary>
     [TestClass]
     public class BooksControllerTests
     {
+        /// <summary>
+        /// Test method to verify that SearchAllBooks returns matching books for a given search input.
+        /// </summary>
         [TestMethod]
         public void TestSearchAllBooks_ReturnsMatchingBooks()
         {
@@ -31,7 +37,10 @@ namespace Yes.Tests
             // Assert
             CollectionAssert.AreEqual(expectedBooks, result);
         }
-        //yey
+
+        /// <summary>
+        /// Test method to verify that SearchAllBooks returns an empty list when no matches are found.
+        /// </summary>
         [TestMethod]
         public void TestSearchAllBooks_ReturnsEmptyListForNoMatches()
         {

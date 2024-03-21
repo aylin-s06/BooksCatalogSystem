@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 
 namespace Yes.Controllers
 {
+    /// <summary>
+    /// Controller responsible for handling author-related actions.
+    /// </summary>
     class AuthorsController
     {
+        /// <summary>
+        /// Searches for all books authored by authors whose names contain the specified search input.
+        /// </summary>
+        /// <param name="searchInput">The input string used for searching author names.</param>
+        /// <returns>A list of anonymous objects representing authors and their books matching the search input.</returns>
         public List<object> SearchAllBooksByAuthor(string searchInput)
         {
             using (var context = new BookCatalogContext())

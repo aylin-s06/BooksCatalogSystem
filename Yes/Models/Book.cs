@@ -8,14 +8,17 @@ using System.Threading.Tasks;
 
 namespace BookCatalog.Models
 {
+    /// <summary>
+    /// Represents a book in the catalog.
+    /// </summary>
     public class Book
     {
         [Key]
-        public int BookId { get; set; }
+        public int BookId { get; set; }   // Unique identifier for the book.
         public string Title { get; set; }
-        public string ISBN { get; set; }
-        public int GenreId { get; set; }
-        public int AuthorId { get; set; }
+        public string ISBN { get; set; }  // International Standard Book Number (ISBN) of the book.
+        public int GenreId { get; set; }  // Foreign key referencing the genre of the book.
+        public int AuthorId { get; set; } // Foreign key referencing the author of the book.
         public bool IsAvailable { get; set; } = false;
         public ICollection<Review> Reviews { get; set; }
     }

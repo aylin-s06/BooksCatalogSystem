@@ -8,8 +8,16 @@ using System.Threading.Tasks;
 
 namespace Yes.Controllers
 {
+    /// <summary>
+    /// Controller responsible for handling genre-related actions.
+    /// </summary>
     class GenresController
     {
+        /// <summary>
+        /// Searches for all books belonging to a selected genre.
+        /// </summary>
+        /// <param name="searchInput">The name of the genre to search for.</param>
+        /// <returns>A list of anonymous objects representing books belonging to the selected genre.</returns>
         public List<object> SearchAllFromSelectedGenre(string searchInput)
         {
             using (var context = new BookCatalogContext())
@@ -25,6 +33,8 @@ namespace Yes.Controllers
                 var genresQuery = context.Book.AsQueryable();
 
                 genresQuery = genresQuery.Where(b => b.GenreId.Equals(index));
+
+                // Join books with genre and author information.
 
                 var books = genresQuery
                .Join(

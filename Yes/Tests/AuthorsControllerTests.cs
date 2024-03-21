@@ -4,9 +4,15 @@ using Yes.Controllers;
 
 namespace Yes.Tests
 {
+    /// <summary>
+    /// Unit tests for the AuthorsController class.
+    /// </summary>
     [TestClass]
     public class AuthorsControllerTests
     {
+        /// <summary>
+        /// Test method to verify that SearchAllBooksByAuthor returns matching books for a given author name.
+        /// </summary>
         [TestMethod]
         public void TestSearchAllBooksByAuthor_ReturnsMatchingBooks()
         { 
@@ -19,16 +25,16 @@ namespace Yes.Tests
               new { AuthorName = "Agatha Christie", BookTitle = "The Secret Adversary" }
             };
 
-            //chakay
-            //stoy day na men
             // Act
             var result = service.SearchAllBooksByAuthor(searchInput);
 
             // Assert
             CollectionAssert.AreEqual(expectedBooks, result);
         }
-        //yess
 
+        /// <summary>
+        /// Test method to verify that SearchAllBooksByAuthor returns an empty list when no matches are found.
+        /// </summary>
         [TestMethod]
         public void TestSearchAllBooksByAuthor_ReturnsEmptyListForNoMatches()
         {

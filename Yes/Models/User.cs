@@ -15,7 +15,7 @@ namespace BookCatalog.Models
         [Key]
         public int UserId { get; set; } // Unique identifier for the user.
 
-        public string UserName { get; set; } //Aylin
+        public string UserName { get; set; } 
 
         public string Email { get; set; } 
 

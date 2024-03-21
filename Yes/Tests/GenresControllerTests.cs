@@ -8,13 +8,19 @@ using Yes.Controllers;
 
 namespace Yes.Tests
 {
+    /// <summary>
+    /// Unit tests for the GenresController class.
+    /// </summary>
     [TestClass]
     public class GenresControllerTests
     {
-        [TestMethod]//super
+        /// <summary>
+        /// Test method to verify that SearchAllFromSelectedGenre returns matching books for a given genre.
+        /// </summary>
+        [TestMethod]
         public void TestSearchAllFromSelectedGenre_ReturnsMatchingBooks()
         {
-            //koe ima nay-malko
+            
             // Arrange
             var service = new GenresController();
             var searchInput = "Horror";
@@ -29,8 +35,9 @@ namespace Yes.Tests
             // Assert
             CollectionAssert.AreEqual(expectedBooks, result);
         }
+
         /// <summary>
-        /// aaa
+        /// Test method to verify that SearchAllFromSelectedGenre returns an empty list when no matches are found.
         /// </summary>
         [TestMethod]
         public void TestSearchAllFromSelectedGenre_ReturnsEmptyListForNoMatches()
