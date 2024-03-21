@@ -7,14 +7,20 @@ using System.Threading.Tasks;
 
 namespace BookCatalog.Models
 {
+    /// <summary>
+    /// Represents a user in the system.
+    /// </summary>
     public class User
     {
         [Key]
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public ICollection<Review> Reviews { get; set; }
-    }
+        public int UserId { get; set; } // Unique identifier for the user.
 
+        public string UserName { get; set; } 
+
+        public string Email { get; set; } 
+
+        public string Password { get; set; } 
+
+        public ICollection<Review> Reviews { get; set; } 
+    }
 }
