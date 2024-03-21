@@ -47,7 +47,7 @@ namespace Yes
                 await Task.Delay(15);
             }
             // Simulate loading process (you should replace this with your actual loading logic)
-            await Task.Delay(2500); // Replace 3000 with the time it takes for your loading to complete
+            await Task.Delay(2500); 
 
             // Once loading is complete, hide the IntroForm, show the LoginForm, and close the IntroForm
             LoginForm loginForm = new LoginForm();

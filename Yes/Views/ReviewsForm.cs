@@ -12,9 +12,16 @@ using Yes.Controllers;
 
 namespace Yes.Views
 {
+    /// <summary>
+    /// Represents the reviews form of the application.
+    /// </summary>
     public partial class ReviewsForm : Form
     {
         ReviewsController reviewsController;
+
+        /// <summary>
+        /// Initializes a new instance of the ReviewsForm class.
+        /// </summary>
         public ReviewsForm()
         {
             InitializeComponent();

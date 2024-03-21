@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace Yes.Views
 {
+    /// <summary>
+    /// Represents the home form of the application.
+    /// </summary>
     public partial class HomeForm : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the HomeForm class.
+        /// </summary>
         public HomeForm()
         {
             InitializeComponent();

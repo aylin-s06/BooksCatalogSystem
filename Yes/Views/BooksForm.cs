@@ -12,9 +12,16 @@ using Yes.Controllers;
 
 namespace Yes.Views
 {
+    /// <summary>
+    /// Represents the form for displaying books.
+    /// </summary>
     public partial class BooksForm : Form
     {
         BooksController booksController;
+
+        /// <summary>
+        /// Initializes a new instance of the BooksForm class.
+        /// </summary>
         public BooksForm()
         {
             InitializeComponent();

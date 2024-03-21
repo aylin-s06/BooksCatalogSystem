@@ -14,9 +14,16 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Yes.Views
 {
+    /// <summary>
+    /// Represents the form for displaying genres and books within those genres.
+    /// </summary>
     public partial class GenresForm : Form
     {
         GenresController genresController;
+
+        /// <summary>
+        /// Initializes a new instance of the GenresForm class.
+        /// </summary>
         public GenresForm()
         {
             InitializeComponent();
@@ -60,17 +67,12 @@ namespace Yes.Views
                 return context.Genre.ToList();
             }
         }
-            // Optionally, you can handle the selection change event of the ComboBox
         private void GenresComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (GenresComboBox.SelectedItem != null)
             {
                 // Get the selected genre name
                 string selectedGenre = GenresComboBox.SelectedItem.ToString();
-
-                // Do something with the selected genre
-                // For example, display it or use it in some other logic
-                //MessageBox.Show("Selected genre: " + selectedGenre);
 
                 // Call the method with the selected genre
                 BooksByGenredataGridView1.DataSource = genresController.SearchAllFromSelectedGenre(selectedGenre);

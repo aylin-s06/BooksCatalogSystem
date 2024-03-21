@@ -11,9 +11,16 @@ using Yes.Controllers;
 
 namespace Yes.Views
 {
+    /// <summary>
+    /// Represents the form for displaying authors and their books.
+    /// </summary>
     public partial class AuthorsForm : Form
     {
         AuthorsController authorsController;
+
+        /// <summary>
+        /// Initializes a new instance of the AuthorsForm class.
+        /// </summary>
         public AuthorsForm()
         {
             InitializeComponent();
@@ -58,6 +65,7 @@ namespace Yes.Views
 
         private void AuthorNameBox_TextChanged(object sender, EventArgs e)
         {
+            // Event handler for changing the text in the author name box
             string author = AuthorNameBox.Text;
             BooksByAuthordataGridView.DataSource = authorsController.SearchAllBooksByAuthor(author);
         }

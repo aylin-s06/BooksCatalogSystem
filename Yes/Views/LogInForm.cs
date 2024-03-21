@@ -12,8 +12,14 @@ using Yes.Controllers;
 
 namespace Yes.Views
 {
+    /// <summary>
+    /// Represents the login form of the application.
+    /// </summary>
     public partial class LoginForm : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the LoginForm class.
+        /// </summary>
         UsersController UsersController;
         public LoginForm()
         {
@@ -30,7 +36,7 @@ namespace Yes.Views
         
         private void KeyPictureBox_Click(object sender, EventArgs e)
         {
-              if (PasswordTextBox.UseSystemPasswordChar)
+            if (PasswordTextBox.UseSystemPasswordChar)
             {
                 // If the password is currently hidden, show it.
                 PasswordTextBox.UseSystemPasswordChar = false;
