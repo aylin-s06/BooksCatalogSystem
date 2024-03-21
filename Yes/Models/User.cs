@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace BookCatalog.Models
 {
+    /// <summary>
+    /// Represents a user in the system.
+    /// </summary>
     public class User
     {
         [Key]
