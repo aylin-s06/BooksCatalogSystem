@@ -1,0 +1,67 @@
+Create Database BookCatalogDB;
+ use BookCatalogDB;
+
+insert into Genres (Name) values ('Horror');
+insert into Genres (Name) values ('Mystery');
+insert into Genres (Name) values ('Fantasy');
+insert into Genres (Name) values ('Science Fiction');
+insert into Genres (Name) values ('Romance');
+
+Select * FROM Genres;
+insert into Authors (Name) values ('Stephen King');
+insert into Authors (Name) values ('Agatha Christie');
+insert into Authors (Name) values ('J.K. Rowling');
+insert into Authors (Name) values ('Isaac Asimov');
+insert into Authors (Name) values ('Jane Austen');
+
+Select * FROM Authors;
+insert into Users (UserName, email, Password) values ('IvanM', 'IvanM@bg.com','IvanMpass');
+insert into Users (UserName, email, Password) values ('Aylin', 'Aylin@bg.com','Aylinpass');
+insert into Users (UserName, email, Password) values ('Nikol', 'Nikol@bg.com','Nikolpass');
+insert into Users (UserName, email, Password) values ('IvanG', 'IvanG@bg.com','IvanGpass');
+Select * From Users;
+
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('The Shining', 1, 1, '418983209-X', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Mr. Mercedes', 1, 2, '886503103-4', 0);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable ) values ('The Dark Tower: The Gunslinger', 1, 3, '618405093-1', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('The Tommyknockers', 1, 4, '930407975-6', 0);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Murder on the Orient Express', 2, 2, '156074124-4', 0);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('And Then There Were None', 2, 2, '438677289-8', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('The Man in the Brown Suit', 2, 5, '001119699-8', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('The Secret Adversary', 2, 5, '489192014-9', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Harry Potter and the Philosophers Stone', 3, 3, '051302767-X', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Harry Potter and the Chamber of Secrets', 3, 3, '583306983-1', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Harry Potter and the Prisoner of Azkaban', 3, 3, '100371588-5', 0);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Harry Potter and the Goblet of Fire', 3, 3, '966904518-5', 0);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Foundation', 4, 4, '967656618-7', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('I, Robot', 4, 4, '071113167-8', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('The Caves of Steel', 4, 4, '535797642-2', 0);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('The Naked Sun', 4, 2, '141968766-2', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Pride and Prejudice', 5, 5, '967780918-0', 0);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Sense and Sensibility', 5, 5, '797922530-9', 1);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Emma', 5, 5, '534399558-6', 0);
+insert into Books (Title, AuthorId, GenreId, ISBN, IsAvailable) values ('Mansfield Park', 5, 5, '024860249-7', 0);
+SELECT * From Books;
+
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Struggled to connect with the characters; the plot felt disjointed.', 1, 1, 21);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Disappointing read, lacked depth and failed to engage.', 2, 2, 22);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Expected more from the storyline, but it fell flat.', 3, 3, 23);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Found the writing style difficult to follow, didn''t finish the book.', 4, 4, 24);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('The premise seemed promising, but execution was lacking.', 5, 1, 25);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Characters were one-dimensional, couldn''t invest in their journey.', 1, 2, 26);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Overly predictable plot twists, didn''t hold my interest.', 2, 3, 27);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Too much exposition, not enough action to keep me engaged.', 3, 4, 28);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Felt like a rehash of cliches, nothing original or compelling.', 4, 1, 29);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Couldn''t suspend disbelief, too many inconsistencies.', 5, 2, 30);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('The pacing was perfect, building tension steadily throughout.', 1, 3, 31);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('A satisfying conclusion that tied up loose ends while leaving room for speculation.', 2, 4, 32);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('Despite a slow start, the story picked up momentum and kept me guessing until the end.', 3, 1, 33);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('The author''s unique voice shines through, making this a standout read.', 4, 2, 34);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('I found myself drawn into the protagonist''s journey, rooting for them every step of the way.', 5, 3, 35);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('The world-building was rich and immersive, creating a vivid backdrop for the story.', 1, 4, 36);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('The dialogue felt natural and authentic, adding depth to the characters.', 2, 13, 37);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('An emotionally resonant tale that tugged at my heartstrings.', 3, 14, 38);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('While not without flaws, the novel''s strengths outweigh its weaknesses.', 4, 15, 39);
+insert into Reviews (Comment, Rating, UserId, BookId) values ('A delightful escape from reality, filled with charm and whimsy.', 5, 16, 40);
+SELECT * FROM Reviews;
+
